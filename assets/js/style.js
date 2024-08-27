@@ -54,3 +54,40 @@ function specialAttack(player) {
         }
     }
 }
+function cpuTurn() {
+    if (Math.random() < 0.3 && !player2SpecialAttackUsed) {
+        cpuSpecialAttack();
+    } else {
+        cpuAttack();
+    }
+}
+
+function cpuAttack() {
+    const damage = getRandomDamage(10); // Get random damage between 1 and 10
+    player1Health -= damage;
+    player1HealthDisplay.textContent = `Health: ${player1Health}`;
+    moveCharacter('player2');
+    if (player1Health <= 0) {
+        endGame('CPU');
+    } else {
+        gameMessage.textContent = "Player 1's turn";
+        disablePlayerControls(false);
+    }
+}
+
+function cpuSpecialAttack() {
+    const damage = getRandomDamage(20) + 10; // Get random damage between 10 and 30
+    player1Health -= damage;
+    player1HealthDisplay.textContent = `Health: ${player1Health}`;
+    moveCharacter('player2');
+    player2SpecialAttackUsed = true;
+    gameMessage.textContent = "CPU used a special attack!";
+    if (player1Health <= 0) {
+        endGame('CPU');
+    } else {
+        setTimeout(() => {
+            gameMessage.textContent = "Player 1's turn";
+            disablePlayerControls(false);
+        }, 1000);
+    }
+}

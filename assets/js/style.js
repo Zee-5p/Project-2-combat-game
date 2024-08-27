@@ -63,7 +63,7 @@ function cpuTurn() {
 }
 
 function cpuAttack() {
-    const damage = getRandomDamage(10); // Get random damage between 1 and 10
+    const damage = getRandomDamage(10); 
     player1Health -= damage;
     player1HealthDisplay.textContent = `Health: ${player1Health}`;
     moveCharacter('player2');
@@ -76,7 +76,7 @@ function cpuAttack() {
 }
 
 function cpuSpecialAttack() {
-    const damage = getRandomDamage(20) + 10; // Get random damage between 10 and 30
+    const damage = getRandomDamage(20) + 10; 
     player1Health -= damage;
     player1HealthDisplay.textContent = `Health: ${player1Health}`;
     moveCharacter('player2');
@@ -91,3 +91,27 @@ function cpuSpecialAttack() {
         }, 1000);
     }
 }
+
+function getRandomDamage(max) {
+    return Math.floor(Math.random() * max) + 1;
+}
+
+function moveCharacter(player) {
+    const moveDistance = 20;
+    if (player === 'player1') {
+        player1Position += moveDistance;
+        player1.style.transform = `translateX(${player1Position}px)`;
+        setTimeout(() => {
+            player1Position -= moveDistance;
+            player1.style.transform = `translateX(${player1Position}px)`;
+        }, 300);
+    } else if (player === 'player2') {
+        player2Position -= moveDistance;
+        player2.style.transform = `translateX(${player2Position}px)`;
+        setTimeout(() => {
+            player2Position += moveDistance;
+            player2.style.transform = `translateX(${player2Position}px)`;
+        }, 300);
+    }
+}
+

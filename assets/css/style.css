@@ -11,5 +11,49 @@
   }
   
   body {
+    font-family: Arial, sans-serif;
+    text-align: center;
     background-color: orange;
-  }
+    margin: 0;
+    padding: 0;
+}
+
+#game-area {
+    width: 75%;
+    height: 75%;
+    margin: 50px auto;
+    position: relative;
+    border: 3px solid black;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.character {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#player1 {
+    left: 0;
+
+}
+#player2 {
+    right: 0;
+}
+
+#game-controls {
+margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#restart-button {
+    margin-top: 20px
+}

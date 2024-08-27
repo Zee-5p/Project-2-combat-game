@@ -15,11 +15,11 @@ const restartBtn = document.getElementById('restart-button');
 let player1Position = 0;
 let player2Position = 0;
 
-player1AttackButton.addeventListener('click', () => player1AttackButton('player1'));
+player1AttackBtn.addEventListener('click', () => player1AttackBtn('player1'));
 
-player1SpecialAttackButton.addEventListener('click', () => specialAttack('player1'));
+player1SpecialAttackBtn.addEventListener('click', () => specialAttack('player1'));
 
-restartButton.addEventListener('click', restartGame);
+restartBtn.addEventListener('click', restartGame);
 
 function attack(player) {
     if (player === 'player1') {

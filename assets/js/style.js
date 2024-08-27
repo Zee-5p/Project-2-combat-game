@@ -115,3 +115,31 @@ function moveCharacter(player) {
     }
 }
 
+function disablePlayerControls(disable) {
+    player1AttackBtn.disabled = disable;
+    player1SpecialAttackBtn.disabled = disable;
+}
+
+
+function endGame(winner) {
+    gameMessage.textContent = `${winner} wins!`;
+    disablePlayerControls(true);
+    restartBtn.classList.remove('hidden');
+}
+
+
+function restartGame() {
+    player1Health = 100;
+    player2Health = 100;
+    player1SpecialAttackUsed = false;
+    player2SpecialAttackUsed = false;
+    player1HealthDisplay.textContent = `Health: ${player1Health}`;
+    player2HealthDisplay.textContent = `Health: ${player2Health}`;
+    disablePlayerControls(false);
+    gameMessage.textContent = "Player 1's turn";
+    player1Position = 0;
+    player2Position = 0;
+    player1.style.transform = `translateX(${player1Position}px)`;
+    player2.style.transform = `translateX(${player2Position}px)`;
+    restartBtn.classList.add('hidden');
+}

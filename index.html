@@ -14,19 +14,22 @@
 </head>
 <body>
 <h1 class="Heading">Z Tournament Championship</h1>
-<div id="game-area">
+<div id="game-container">
+  <div id="game-area">
     <div id="player1" class="character" style="background-image: url(assets/images/player1.png);"></div> 
     <div id="player2" class="character" style="background-image: url(assets/images/player2.png);"></div> 
-    <div id="game-controls">
+  </div>
+      <div id="game-controls">
         <button id="player1-attack">Attack</button> 
         <button id="player1-special-attack">Special Attack</button> 
-    </div>
-    <div id="game-info">
-        <div id="player1-health">Health: 100</div>
-        <div id="player2-health">Health: 100</div> 
-        <div id="game-message">Player 1's turn</div> 
-    </div>
+      </div>
+      <div id="game-info">
+           <div id="player1-health">Health: 100</div>
+           <div id="player2-health">Health: 100</div> 
+           <div id="game-message">Player 1's turn</div> 
+      </div>
     <button id="restart-button" class="hidden">Restart Game</button> 
+      
 </div>
     <script src="assets/js/style.js">  </script>
 </body>

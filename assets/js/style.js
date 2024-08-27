@@ -15,7 +15,7 @@ const restartBtn = document.getElementById('restart-button');
 let player1Position = 0;
 let player2Position = 0;
 
-player1AttackBtn.addEventListener('click', () => player1AttackBtn('player1'));
+player1AttackBtn.addEventListener('click', () => attack('player1'));
 
 player1SpecialAttackBtn.addEventListener('click', () => specialAttack('player1'));
 

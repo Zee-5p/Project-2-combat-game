@@ -36,3 +36,21 @@ function attack(player) {
         }
     }
 }
+
+function specialAttack(player) {
+    if (player === 'player1' && !player1SpecialAttackUsed) {
+        const damage = getRandomDamage(20) + 10;
+        player2Health -= damage;
+        player2HealthDisplay.textContent = `Health: ${player2Health}`;
+        moveCharacter('player1');
+        player1SpecialAttackUsed = true;
+        player1SpecialAttackBtn.disabled = true;
+        if (player2Health <= 0) {
+            endGame('Player 1');
+        } else {
+            gameMessage.textContent = "CPU's turn";
+            disablePlayerControls(true);
+            setTimeout(cpuTurn, 1000); 
+        }
+    }
+}

@@ -178,7 +178,7 @@ button:hover {
 
 }
 
-button:disabled {
+#player1-special-attack button:disabled {
     background-color: gray;
     color: gray;
     cursor: not-allowed;

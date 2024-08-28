@@ -196,7 +196,7 @@ button:disabled {
 
 @keyframes fadeUp {
     from {
-        opacity: 1;
+        opacity: 11;
         transform: translateY(0);
     }
     to {

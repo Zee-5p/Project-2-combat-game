@@ -24,7 +24,7 @@ restartBtn.addEventListener('click', restartGame);
 function showDamage(player, damage) {
     const damageIndicator = document.createElement('div');
     damageIndicator.className = 'damage-indicator';
-    damageIndicator.textContent = '${damage}';
+    damageIndicator.textContent = `-${damage}`;
 
     const playerElement = player === 'player1' ? player1 : player2;
     playerElement.appendChild(damageIndicator);

@@ -257,7 +257,7 @@ Defines the animation for the damage indicator, making it float upwards and fade
     border-radius: 5px;
 }
 
-/* Hidden class (no longer used) */
+/* Hidden class */
 .hidden {
     display: none;
 }

@@ -67,6 +67,7 @@ function specialAttack(player) {
         showDamage('player2', damage); 
         gameMessage.textContent = `Player 1 uses a Special Attack! Damage dealt: ${damage}`;
         player1SpecialAttackUsed = true;
+        player1SpecialAttackBtn.classList.add('hidden');
         player1SpecialAttackBtn.disabled = true;
         console.log(player1SpecialAttackBtn.disabled);
         if (player2Health <= 0) {
@@ -171,4 +172,5 @@ function restartGame() {
     player1.style.transform = `translateX(${player1Position}px)`;
     player2.style.transform = `translateX(${player2Position}px)`;
     restartBtn.classList.add('hidden');
+    player1SpecialAttackBtn.classList.remove('hidden');
 }

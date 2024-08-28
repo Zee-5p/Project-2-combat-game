@@ -56,7 +56,7 @@ function attack(player) {
 
 function specialAttack(player) {
     if (player === 'player1' && !player1SpecialAttackUsed) {
-        const damage = getRandomDamage(20) + 10;
+        const damage = getRandomDamage(20) + 15;
         player2Health -= damage;
         player2HealthDisplay.textContent = `Health: ${player2Health}`;
         moveCharacter('player1');

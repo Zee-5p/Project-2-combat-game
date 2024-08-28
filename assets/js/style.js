@@ -1,8 +1,10 @@
+// Initial health and special attack usage
 let player1Health = 100;
 let player2Health = 100;
 let player1SpecialAttackUsed = false;
 let player2SpecialAttackUsed = false;
 
+// DOM element references
 const player1 = document.getElementById('player1');
 const player2 = document.getElementById('player2');
 const player1HealthDisplay = document.getElementById('player1-health');
@@ -15,12 +17,14 @@ const restartBtn = document.getElementById('restart-button');
 let player1Position = 0;
 let player2Position = 0;
 
+// Event listeners for player actions
 player1AttackBtn.addEventListener('click', () => attack('player1'));
 
 player1SpecialAttackBtn.addEventListener('click', () => specialAttack('player1'));
 
 restartBtn.addEventListener('click', restartGame);
 
+// Display damage on the screen
 function showDamage(player, damage) {
     console.log(`Showing damage: ${damage} for ${player}`);
     const damageIndicator = document.createElement('div');
@@ -35,7 +39,7 @@ function showDamage(player, damage) {
     }, 1000);
 }
 
-
+// Handle normal attack
 function attack(player) {
     if (player === 'player1') {
         const damage = getRandomDamage(15); 
@@ -53,7 +57,7 @@ function attack(player) {
         }
     }
 }
-
+// Handle a special attack by the player
 function specialAttack(player) {
     if (player === 'player1' && !player1SpecialAttackUsed) {
         const damage = getRandomDamage(20) + 15;
@@ -74,6 +78,7 @@ function specialAttack(player) {
         }
     }
 }
+// Determine CPU's action during its turn
 function cpuTurn() {
     if (Math.random() < 0.3 && !player2SpecialAttackUsed) {
         cpuSpecialAttack();
@@ -81,7 +86,7 @@ function cpuTurn() {
         cpuAttack();
     }
 }
-
+// Handle CPU's normal attack
 function cpuAttack() {
     const damage = getRandomDamage(15); 
     player1Health -= damage;
@@ -96,7 +101,7 @@ function cpuAttack() {
         disablePlayerControls(false);
     }
 }
-
+// Handle CPU's special attack
 function cpuSpecialAttack() {
     const damage = getRandomDamage(20) + 10; 
     player1Health -= damage;
@@ -115,11 +120,11 @@ function cpuSpecialAttack() {
         }, 1000);
     }
 }
-
+// Generate a random damage value up to the specified maximum
 function getRandomDamage(max) {
     return Math.floor(Math.random() * max) + 1;
 }
-
+// Move the character on the screen during an attack
 function moveCharacter(player) {
     const moveDistance = 20;
     if (player === 'player1') {
@@ -138,20 +143,20 @@ function moveCharacter(player) {
         }, 300);
     }
 }
-
+// Enable or disable player controls
 function disablePlayerControls(disable) {
     player1AttackBtn.disabled = disable;
     player1SpecialAttackBtn.disabled = disable;
 }
 
-
+// End the game and declare the winner
 function endGame(winner) {
     gameMessage.textContent = `${winner} wins!`;
     disablePlayerControls(true);
     restartBtn.classList.remove('hidden');
 }
 
-
+// Reset the game to its initial state
 function restartGame() {
     player1Health = 100;
     player2Health = 100;

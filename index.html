@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<!-- Google Fonts: Preconnection and linking Silkscreen font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Z Tournament Championship</title>
+    <!-- Link to the external CSS stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
 <body>
+  <!-- 
+    **Main Heading**
+    Displays the main title of the game.
+    Font is applied from the linked Google Fonts.
+    -->
 <h1 class="Heading">Z Tournament Championship</h1>
-<div id="game-container">
+ <!-- 
+    **Game Container**
+    Main wrapper for the game elements including the game area, controls, and game information.
+    -->
+<main div id="game-container">
+  <!-- 
+        **Game Area**
+        Contains the player characters. 
+        Player characters are represented by divs with classes for styling and positioning.
+        -->
   <div id="game-area">
     <div id="player1" class="character"></div> 
     <div id="player2" class="character"></div> 
   </div>
+  <!-- 
+        **Game Controls**
+        Contains the buttons for player actions such as Attack and Special Attack.
+        -->
       <div id="game-controls">
         <button id="player1-attack">Attack</button> 
         <button id="player1-special-attack">Special Attack</button> 
       </div>
-      <div id="game-info">
-           
-           
+       <!-- 
+        **Game Information**
+        Displays the game messages and health of each player.
+        -->
+      <div id="game-info">  
            <div id="game-message">Player 1's turn</div> 
       </div>
+      <!-- 
+        **Health Displays**
+        Shows the health status of both players.
+        -->
     <div id="player1-health" class="health-display">P1:Health: 100</div>
     <div id="player2-health" class="health-display">P2:Health: 100</div> 
+    <!-- 
+        **Restart Button**
+        Hidden by default; appears after the game ends to allow restarting the game.
+        -->
     <button id="restart-button" class="hidden">Restart Game</button> 
       
 </div>
+<!-- 
+    **JavaScript**
+    External JavaScript file to handle the game logic and interactions.
+    -->
     <script src="assets/js/style.js">  </script>
 </body>
 </html>

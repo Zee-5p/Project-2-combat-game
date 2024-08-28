@@ -1,4 +1,7 @@
-/* general styles */
+/* 
+**General Styles**
+This section covers the basic styles applied globally, including fonts, body, and general text settings.
+*/
 .Heading {
     font-family: "Silkscreen", sans-serif;
     font-weight: 900;
@@ -18,7 +21,10 @@ body {
     line-height: 1.6;
 }
 
-/* Game container */
+/* 
+**Game Container**
+Styles for the main game container, controlling the layout, size, and background.
+*/
 #game-container {
     position: relative;
     width: 90%; 
@@ -30,7 +36,10 @@ body {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); 
 }
 
-/* Game area */
+/* 
+**Game Area**
+Defines the space where characters appear and interact, including background and positioning.
+*/
 #game-area {
     width: 100%;
     height: 60vh; 
@@ -40,7 +49,10 @@ body {
     overflow: hidden; 
 }
 
-/* Character styles */
+/* 
+**Character Styles**
+CSS rules for the player characters, including size, position, and background image settings.
+*/
 .character {
     width: 25%; 
     max-width: 200px;
@@ -56,6 +68,7 @@ body {
     left: 10%;
     height: 75%; 
     max-height: 100%;
+    background-image: url(../images/goku.png);
 }
 
 #player2 {
@@ -63,9 +76,13 @@ body {
     bottom: 10px; 
     height: 70%; 
     max-height: 100%;
+    background-image: url(../images/majinbuu.png);
 }
 
-/* Controls and information */
+/* 
+**Controls and Information**
+Styles for the control buttons and game information text.
+*/
 #game-controls {
     display: flex;
     justify-content: center;
@@ -78,12 +95,18 @@ body {
     margin-bottom: 20px;
 }
 
-/* Hidden elements */
+/* 
+**Hidden Elements**
+Defines the style for elements that should be hidden, such as the restart button initially.
+*/
 .hidden {
     display: none;
 }
 
-/* Restart button */
+/* 
+**Restart Button**
+Specific styles for the restart button, including hover effects and transitions.
+*/
 #restart-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -100,7 +123,10 @@ body {
     background-color: #ff6347;
 }
 
-/* Responsive adjustments */
+/* 
+**Responsive Adjustments**
+Media queries to adjust styles for smaller screen sizes, ensuring the layout remains accessible and visually appealing.
+*/
 @media (max-width: 768px) {
     #game-container {
         width: 95%;
@@ -135,7 +161,10 @@ body {
         font-size: 14px; 
     }
 }
-
+/* 
+**Health Displays**
+Styles for the health display boxes positioned near the characters.
+*/
 .health-display {
     position: absolute;
     bottom: 10px; 
@@ -153,7 +182,10 @@ body {
 #player2-health {
     right: 10px;
 }
-
+/* 
+**Button Styles**
+General button styles applied to both attack and special attack buttons.
+*/
 button {
     font-family: "Silkscreen", sans-serif;
     font-size: 90%;
@@ -183,7 +215,10 @@ button:disabled {
     color: gray;
     cursor: not-allowed;
 }
-
+/* 
+**Damage Indicator**
+Styles for the floating damage indicator that appears when a player is hit.
+*/
 .damage-indicator {
     position: absolute;
     font-size: 20px;
@@ -192,7 +227,10 @@ button:disabled {
     animation: floatUp 2s ease-out forwards;
     z-index: 20;
 }
-
+/* 
+**Keyframes**
+Defines the animation for the damage indicator, making it float upwards and fade out.
+*/
 @keyframes floatUp {
     0% {
         transform: translateY(0);

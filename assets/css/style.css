@@ -241,3 +241,37 @@ Defines the animation for the damage indicator, making it float upwards and fade
         opacity: 0;
     }
 }
+
+/* Instructions container */
+#instructions-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Instructions toggle button */
+#instructions-toggle {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #c44c20;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Instructions content */
+#instructions {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}

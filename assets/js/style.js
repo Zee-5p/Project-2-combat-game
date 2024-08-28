@@ -172,3 +172,11 @@ function restartGame() {
     player2.style.transform = `translateX(${player2Position}px)`;
     restartBtn.classList.add('hidden');
 }
+
+// Toggle instructions visibility
+const instructionsToggle = document.getElementById('instructions-toggle');
+const instructions = document.getElementById('instructions');
+
+instructionsToggle.addEventListener('click', () => {
+    instructions.classList.toggle('hidden');
+});

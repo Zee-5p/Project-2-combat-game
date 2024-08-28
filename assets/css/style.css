@@ -29,8 +29,8 @@
 }
 
 .character {
-    width: 120px;
-    height: 120px;
+    width: auto;
+    height: 50%;
     position: absolute;
     bottom: 10px;
     background-size: contain;
@@ -40,15 +40,22 @@
 
 #player1 {
     left: 0;
-    background-image: url(assets/images/player1.png);
+    background-image: url('assets/images/player1.png');
 
 }
 #player2 {
     right: 0;
+    background-image: url('assets/images/player2.png');
 }
 
 #game-controls {
-margin-top: 20px;
+display: flex;
+justify-content: center;
+}
+
+#game-info {
+    font-size: 18px;
+    color:white
 }
 
 .hidden {

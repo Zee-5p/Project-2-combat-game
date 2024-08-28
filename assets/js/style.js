@@ -22,6 +22,7 @@ player1SpecialAttackBtn.addEventListener('click', () => specialAttack('player1')
 restartBtn.addEventListener('click', restartGame);
 
 function showDamage(player, damage) {
+    console.log(`Showing damage: ${damage} for ${player}`);
     const damageIndicator = document.createElement('div');
     damageIndicator.className = 'damage-indicator';
     damageIndicator.textContent = `-${damage}`;
@@ -41,7 +42,7 @@ function attack(player) {
         player2Health -= damage;
         player2HealthDisplay.textContent = `Health: ${player2Health}`;
         moveCharacter('player1');
-        showDamage('player2', damage); // Show damage near player 2
+        showDamage('player2', damage); 
         gameMessage.textContent = `Player 1 attacks! Damage dealt: ${damage}`;
         if (player2Health <= 0) {
             endGame('Player 1');

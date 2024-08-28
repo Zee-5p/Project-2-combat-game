@@ -189,18 +189,17 @@ button:disabled {
     font-size: 20px;
     color: red;
     font-weight: bold;
-    animation: fadeUp 1s ease-out forwards;
-    pointer-events: none;
+    animation: floatUp 2s ease-out forwards;
     z-index: 20;
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 11;
+@keyframes floatUp {
+    0% {
         transform: translateY(0);
+        opacity: 1;
     }
-    to {
+    100% {
+        transform: translateY(-20px);
         opacity: 0;
-        transform: translateY(-30px);
     }
 }

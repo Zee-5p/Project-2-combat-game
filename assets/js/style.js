@@ -45,6 +45,7 @@ function specialAttack(player) {
         moveCharacter('player1');
         player1SpecialAttackUsed = true;
         player1SpecialAttackBtn.disabled = true;
+        console.log(player1SpecialAttackBtn.disabled);
         if (player2Health <= 0) {
             endGame('Player 1');
         } else {

@@ -153,3 +153,33 @@ body {
 #player2-health {
     right: 10px;
 }
+
+button {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 50%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+#player1-attack {
+    background-color: #c44c20;
+    color: black;
+}
+
+#player1-special-attack {
+    background-color: #c44c20;
+    color: black;
+}
+
+button:hover {
+    background-color: #ff4500;
+
+}
+
+button:disabled {
+    background-color: gray;
+    color: gray;
+    cursor: not-allowed;
+}

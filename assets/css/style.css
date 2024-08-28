@@ -1,9 +1,9 @@
 /* general styles */
 .Heading {
     font-family: "Silkscreen", sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
-    font-size: ;
+    font-size: 230%;
     margin: 0;
     padding: 20px;
     color: #fff;
@@ -156,9 +156,9 @@ body {
 
 button {
     font-family: "Silkscreen", sans-serif;
-    font-size: 50%;
+    font-size: 90%;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
 
 }
@@ -178,8 +178,29 @@ button:hover {
 
 }
 
-#player1-special-attack button:disabled {
+button:disabled {
     background-color: gray;
     color: gray;
     cursor: not-allowed;
+}
+
+.damage-indicator {
+    position: absolute;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    animation: fadeUp 1s ease-out forwards;
+    pointer-events: none;
+    z-index: 20;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
 }

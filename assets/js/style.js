@@ -21,12 +21,28 @@ player1SpecialAttackBtn.addEventListener('click', () => specialAttack('player1')
 
 restartBtn.addEventListener('click', restartGame);
 
+function showDamage(player, damage) {
+    const damageIndicator = document.createElement('div');
+    damageIndicator.className = 'damage-indicator';
+    damageIndicator.textContent = '${damage}';
+
+    const playerElement = player === 'player1' ? player1 : player2;
+    playerElement.appendChild(damageIndicator);
+    
+    setTimeout(() => {
+        damageIndicator.remove();
+    }, 1000);
+}
+
+
 function attack(player) {
     if (player === 'player1') {
-        const damage = getRandomDamage(10); 
+        const damage = getRandomDamage(15); 
         player2Health -= damage;
         player2HealthDisplay.textContent = `Health: ${player2Health}`;
         moveCharacter('player1');
+        showDamage('player2', damage); // Show damage near player 2
+        gameMessage.textContent = `Player 1 attacks! Damage dealt: ${damage}`;
         if (player2Health <= 0) {
             endGame('Player 1');
         } else {
@@ -43,6 +59,8 @@ function specialAttack(player) {
         player2Health -= damage;
         player2HealthDisplay.textContent = `Health: ${player2Health}`;
         moveCharacter('player1');
+        showDamage('player2', damage); 
+        gameMessage.textContent = `Player 1 uses a Special Attack! Damage dealt: ${damage}`;
         player1SpecialAttackUsed = true;
         player1SpecialAttackBtn.disabled = true;
         console.log(player1SpecialAttackBtn.disabled);
@@ -64,10 +82,12 @@ function cpuTurn() {
 }
 
 function cpuAttack() {
-    const damage = getRandomDamage(10); 
+    const damage = getRandomDamage(15); 
     player1Health -= damage;
     player1HealthDisplay.textContent = `Health: ${player1Health}`;
     moveCharacter('player2');
+    showDamage('player1', damage); 
+    gameMessage.textContent = `CPU attacks! Damage dealt: ${damage}`;
     if (player1Health <= 0) {
         endGame('CPU');
     } else {
@@ -81,7 +101,9 @@ function cpuSpecialAttack() {
     player1Health -= damage;
     player1HealthDisplay.textContent = `Health: ${player1Health}`;
     moveCharacter('player2');
+    showDamage('player1', damage); 
     player2SpecialAttackUsed = true;
+    gameMessage.textContent = `CPU uses a Special Attack! Damage dealt: ${damage}`;
     gameMessage.textContent = "CPU used a special attack!";
     if (player1Health <= 0) {
         endGame('CPU');

@@ -177,6 +177,10 @@ function restartGame() {
 const instructionsToggle = document.getElementById('instructions-toggle');
 const instructions = document.getElementById('instructions');
 
+if (instructionsToggle && instructions) {
 instructionsToggle.addEventListener('click', () => {
     instructions.classList.toggle('hidden');
 });
+} else {
+    console.error('Instructions toggle button or content not found');
+}

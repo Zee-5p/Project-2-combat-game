@@ -20,6 +20,7 @@ body {
 
 /* Game container */
 #game-container {
+    position: relative;
     width: 90%; 
     max-width: 1200px; 
     margin: 50px auto;
@@ -133,4 +134,22 @@ body {
     #game-info {
         font-size: 14px; 
     }
+}
+
+.health-display {
+    position: absolute;
+    bottom: 10px; 
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 5px;
+}
+
+#player1-health {
+    left: 10px;
+}
+
+#player2-health {
+    right: 10px;
 }

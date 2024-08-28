@@ -29,23 +29,23 @@
 }
 
 .character {
-    width: auto;
-    height: 50%;
+    width: 35%;
+    height: 35%;
     position: absolute;
     bottom: 10px;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 10;
 
 }
 
 #player1 {
-    left: 0;
-    background-image: url('assets/images/player1.png');
-
+    left: 10%;  
 }
 #player2 {
-    right: 0;
-    background-image: url('assets/images/player2.png');
+    right: 10%;
+
+    
 }
 
 #game-controls {

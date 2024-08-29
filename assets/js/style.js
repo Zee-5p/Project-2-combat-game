@@ -26,7 +26,6 @@ restartBtn.addEventListener('click', restartGame);
 
 // Display damage on the screen
 function showDamage(player, damage) {
-    console.log(`Showing damage: ${damage} for ${player}`);
     const damageIndicator = document.createElement('div');
     damageIndicator.className = 'damage-indicator';
     damageIndicator.textContent = `-${damage}`;
@@ -69,7 +68,6 @@ function specialAttack(player) {
         player1SpecialAttackUsed = true;
         player1SpecialAttackBtn.classList.add('hidden');
         player1SpecialAttackBtn.disabled = true;
-        console.log(player1SpecialAttackBtn.disabled);
         if (player2Health <= 0) {
             endGame('Player 1');
         } else {

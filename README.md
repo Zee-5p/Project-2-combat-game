@@ -5,7 +5,7 @@ Z Tournament Championship is a retro Dragon Ball Z inspired game packed full of 
 Z tournament championship is an interactive web-based fighting game that showcases the power of JavaScript in creating a dynamic and engaging user experiences. This project aims to offer players an enjoyable and nostalgic game, where they can engage in one-on-one combat using iconic characters. The target audience includes fans of fighting games, anime enthusiasts, and those with an interest in game development. By offering both basic attacks and special moves, Z Tournament Championship provides a game where players can time the use of their attacks to gain victory. This game is fully responsive, ensuring a seamless experience across a wide range of devices, from desktops to mobile phones.
 
 
-![image of game displayed on different devices to showcase compatibility](assets/images/compatibility.png)
+![image of game displayed on different devices to showcase compatibility](assets/images/responsive.png)
 
 ## Features
 Z Tournament Championship has many features to enhance the gameplay experience and provide users with clear feedback and control options. Each feature is designed to improve user engagement and deliver a polished, enjoyable gaming experience.

@@ -38,16 +38,16 @@
         Player characters are represented by divs with classes for styling and positioning.
         -->
   <div id="game-area">
-    <div id="player1" class="character"></div> 
-    <div id="player2" class="character"></div> 
+    <div id="player1" class="character" aria-label="Player 1 character"></div> 
+    <div id="player2" class="character" aria-label="Player 2 character"></div> 
   </div>
   <!-- 
         **Game Controls**
         Contains the buttons for player actions such as Attack and Special Attack.
         -->
       <div id="game-controls">
-        <button id="player1-attack">Attack</button> 
-        <button id="player1-special-attack">Special Attack</button> 
+        <button id="player1-attack" aria-label="Player 1 Attack Button">Attack</button> 
+        <button id="player1-special-attack" aria-label="Player 1 Special Attack Button">Special Attack</button> 
       </div>
        <!-- 
         **Game Information**
@@ -66,7 +66,7 @@
         **Restart Button**
         Hidden by default; appears after the game ends to allow restarting the game.
         -->
-    <button id="restart-button" class="hidden">Restart Game</button> 
+    <button id="restart-button" class="hidden" aria-label="Restart Game Button">Restart Game</button> 
 </main>
 <!-- 
     **JavaScript**

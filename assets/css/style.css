@@ -168,7 +168,7 @@ Styles for the health display boxes positioned near the characters.
 .health-display {
     position: absolute;
     bottom: 10px; 
-    font-size: 18px;
+    font-size: 90%;
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.6); 

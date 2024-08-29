@@ -1,131 +1,114 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Z Tournament Championship
+## Overview
+Z Tournament Championship is a retro Dragon Ball Z inspired game packed full of nostalgia. As a child DBZ was my favourite show and it continued to be as i grew older, i wanted to pay tribute to that with this project!
 
-Welcome Zeeshan Mahmood,
+Z tournament championship is an interactive web-based fighting game that showcases the power of JavaScript in creating a dynamic and engaging user experiences. This project aims to offer players an enjoyable and nostalgic game, where they can engage in one-on-one combat using iconic characters. The target audience includes fans of fighting games, anime enthusiasts, and those with an interest in game development. By offering both basic attacks and special moves, Z Tournament Championship provides a game where players can time the use of their attacks to gain victory. This game is fully responsive, ensuring a seamless experience across a wide range of devices, from desktops to mobile phones.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+![image of game displayed on different devices to showcase compatibility](assets/images/compatibility.png)
 
-## Gitpod Reminders
+## Features
+Z Tournament Championship has many features to enhance the gameplay experience and provide users with clear feedback and control options. Each feature is designed to improve user engagement and deliver a polished, enjoyable gaming experience.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Existing Features
+### The Z Tournament Heading
+Featured at the top of the page is the heading, the Z Tournament Championship heading immediately capture the user's attention adn gives the nostalgic retro feel that is displayed throughout the page. This ensures that users are aware of the game's identity from the moment they land on the page, using an arcade like theme from google fonts gives the correct impression for the purpose of the game. 
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+![image of heading from main page](assets/images/heading.png)
 
-Another blue button should appear to click: _Open Browser_.
+## Instructions 
+To allow for a seamless user experince below the heading players are greeted with clear instructions on how to play the game. It outlines the basic controls, game mechanics, and the objective of the game. This ensures that players can easily understand how to engage with the game, enhancing user satisfaction.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
 
-A blue button should appear to click: _Make Public_,
+![image of instructions show below the heading](assets/images/instructions.png)
 
-Another blue button should appear to click: _Open Browser_.
+## The Game Area
+The main area where the game takes place, featuring two characters, Goku and Majin Buu, facing off against each other. The game area is designed with dynamic backgrounds and responsive character animations including real-time visual feedback on attacks and damage dealt. this gives a better user experince allow users to better undertsand what is happening during the fight.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![image of the game area and the fighters](assets/images/game-area.png)
 
-To log into the Heroku toolbelt CLI:
+## Game Controls
+Includes the "Attack" and "Special Attack" buttons, allowing players to execute different types of moves against their opponents. This gives players control over their character's actions, allowing for strategic gameplay decisions that can influence the outcome of the match.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+![image of attack buttons](assets/images/buttons.png)
 
-### Connecting your Mongo database
+## Health Displays
+The health displays are positioned below each character, showing their current health level. As damage is taken, the health decreases, providing a visual represenation of their health. This allows users to keep track of their health through the game and make decisons on which attack to use dpeending on their remainign health.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+![image of health displays](assets/images/health-display.png)
 
-------
+## Game Information Display
+A dynamic text area that updates to inform players of the current turn, attack outcomes, and game progress. This helps keep players informed and engaged by providing real-time updates and feedback on their actions and the game.
 
-## Release History
+![game information display showing that it is player 1s turn](assets/images/game-info-display.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Restart Button
+At the end of the game when a winner is decalred the restart button will appear, allowing players to quickly restart the game without needing to refresh the page. This enhances the user experience by making it easy to replay the game, encouraging continued engagement and multiple playthroughs.
 
-**June 18, 2024,** Add Mongo back into template
+![image of restart button](assets/images/restart-button.png)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## Features Left to Implement
 
-**May 28 2024:** Fix Mongo and Links installs
+### Multiplayer Mode
+Future plans include adding a multiplayer mode where players can compete against each other in real-time. This expands the game's appeal by allowing friends to play together, increasing the game's replay value.
 
-**April 26 2024:** Update node version to 16
+### Character Selection
+Adding a roster of characters from the DBZ universe that can be selected by the user. Users will be able to select their favourite characters catering the game to them. This allows the game to be more customisable adding more variety and depth to the game.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### interchangeable packgrounds and theme music
+Including chnageable packgrounds and theme music would give the game more of an arcade feel and once again give users more options enhancing the user experience.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Enhanced animations and specific special attacks per character
+In future versions the player animations when attacking would be improved and animations for attacks would be visible showing the energy being shot from one character at the other. Another feature that would be included would be giving each charcter their own special attack from the anime series and the corresponding animation. this improves the game mehcanics and the visual and gaming experience for the user.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Adding levels of increasing difficulty 
+As the users go through the game, if they were to win the first match then a new opponent would be loaded for 'level 2' this opponent would be stronger and have different attacks. This adds variety and gives users somethig to play for as they can progress through the game, increasing the replay value.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Testing
+Thorough testing has been conducted to ensure that Z Tournament Championship functions as intended across all supported devices and browsers. Each feature has been rigorously tested to confirm that it works as expected, providing a smooth and enjoyable user experience.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Cross-Browser Testing
+Browsers Tested: Google Chrome, Mozilla Firefox, Safari, Microsoft Edge
+The game performs consistently across all tested browsers, with no noticeable differences in functionality or appearance.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Responsive Design Testing
+Devices Tested: Desktop, Tablet, Mobile.
+The game is fully responsive, with all elements adapting appropriately to different screen sizes. No major issues were encountered during testing on various devices.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Validator Testing
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+HTML
+Results: No errors were returned when passing through the official W3C validator.
+CSS
+Results: No errors were found when passing through the official (Jigsaw) validator.
+JavaScript
+Results: No errors were found when passing through the official JSHint validator. The following metrics were returned:
+There are 15 functions in this file.
+The function with the largest signature takes 2 arguments, while the median is 0.
+The largest function has 12 statements in it, while the median is 3.
+The most complex function has a cyclomatic complexity value of 4 while the median is 2.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Unfixed Bugs
+Special Attack Button Visibility: Occasionally, after restarting the game, the special attack button may not reappear as expected. This issue has been identified but remains unresolved due to time constraints. Further investigation is required to implement a reliable fix.
+Deployment
+Z Tournament Championship has been deployed to GitHub Pages, providing an easy way for users to access and play the game online. The deployment process was straightforward, and the site is now live and accessible via the following steps:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Navigate to the GitHub Repository: Go to the repository where the project's code is stored.
+Access the Settings Tab: Click on the "Settings" tab in the repository's menu.
+Choose the Source Branch: In the "Pages" section, select "Main" or "Master" branch as the source.
+Save and Deploy: After selecting the branch, the site will automatically deploy. A success message will appear once the process is complete.
+The live link to the deployed site is available here: Z Tournament Championship Live
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Credits
+Content
+Game Logic and JavaScript Implementation: Developed and written by [Your Name].
+Instructional Text: Created specifically for Z Tournament Championship.
+Media
+Character Images: The character images used in the game are sourced from [specific open-source sites or created by the developer].
+Icons and Buttons: Icons and buttons are styled using custom CSS, with inspiration drawn from various online resources.
+Acknowledgments
+Tutorials and Guides: Special thanks to the authors of various JavaScript and CSS tutorials that helped refine the game's functionality.
+Testing Assistance: Acknowledgment to friends and peers who assisted in testing the game across different platforms and providing valuable feedback

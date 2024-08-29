@@ -79,36 +79,39 @@ The game is fully responsive, with all elements adapting appropriately to differ
 
 ### Validator Testing
 
-HTML
-Results: No errors were returned when passing through the official W3C validator.
-CSS
-Results: No errors were found when passing through the official (Jigsaw) validator.
-JavaScript
-Results: No errors were found when passing through the official JSHint validator. The following metrics were returned:
-There are 15 functions in this file.
-The function with the largest signature takes 2 arguments, while the median is 0.
-The largest function has 12 statements in it, while the median is 3.
-The most complex function has a cyclomatic complexity value of 4 while the median is 2.
+*HTML*
+No errors were returned when passing through the official W3C validator.
+
+*CSS*
+No errors were found when passing through the official (Jigsaw) validator.
+
+*JavaScript*
+No errors were found when passing through the official JSHint validator. 
+
+Metrics:
+There are 17 functions in this file.
+Function with the largest signature take 2 arguments, while the median is 0.
+Largest function has 16 statements in it, while the median is 3.
+The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 
 ## Unfixed Bugs
-Special Attack Button Visibility: Occasionally, after restarting the game, the special attack button may not reappear as expected. This issue has been identified but remains unresolved due to time constraints. Further investigation is required to implement a reliable fix.
-Deployment
-Z Tournament Championship has been deployed to GitHub Pages, providing an easy way for users to access and play the game online. The deployment process was straightforward, and the site is now live and accessible via the following steps:
+There were no unfixed bugs identified. During the making of this project i came across multiple issues around the javascript including the disabling of the special attack button and also with the loading of the images on css. These bugs amongst others were debugged in the process
 
-Navigate to the GitHub Repository: Go to the repository where the project's code is stored.
-Access the Settings Tab: Click on the "Settings" tab in the repository's menu.
-Choose the Source Branch: In the "Pages" section, select "Main" or "Master" branch as the source.
-Save and Deploy: After selecting the branch, the site will automatically deploy. A success message will appear once the process is complete.
-The live link to the deployed site is available here: Z Tournament Championship Live
+## Deployment
 
-Credits
-Content
-Game Logic and JavaScript Implementation: Developed and written by [Your Name].
-Instructional Text: Created specifically for Z Tournament Championship.
-Media
-Character Images: The character images used in the game are sourced from [specific open-source sites or created by the developer].
-Icons and Buttons: Icons and buttons are styled using custom CSS, with inspiration drawn from various online resources.
-Acknowledgments
-Tutorials and Guides: Special thanks to the authors of various JavaScript and CSS tutorials that helped refine the game's functionality.
-Testing Assistance: Acknowledgment to friends and peers who assisted in testing the game across different platforms and providing valuable feedback
+The site was deployed to GitHub pages the platform used to write the code. The steps taken are as follows:
+1. In the GitHub repository, navigate to the Settings tab
+2. From the source code and automation side tab select pages
+3. Set the branch to main and select root as the file
+Once this has been done the system will run some checks and eventually deploy the site.
+The live link can be found here - https://zee-5p.github.io/Project-2-combat-game/
+
+## Credits
+
+### Media
+- The images for the favicon and the charcater were taken from the following site - https://www.pngwing.com/en/search?q=dragon+ball
+- The font for the heading and buttons was taken from Google Fonts.
+
+### Content
+When trying to figure out how to make certain javascript code work and what code to use, i used the following resources for help and inspiration : Reddit, Youtube, Google.
